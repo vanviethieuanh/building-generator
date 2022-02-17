@@ -191,9 +191,10 @@ const rest = [
 ]
 
 function add_image(palette) {
-    const imgSource = `/images/${palette}.png`
-        ? window.location.hostname === 'localhost'
-        : `https://${window.location.hostname}/building-generator/images/${palette}.png`
+    const imgSource =
+        window.location.hostname === 'localhost'
+            ? `/images/${palette}.png`
+            : `https://${window.location.hostname}/building-generator/images/${palette}.png`
 
     // create div with background image
     const div = document.createElement('div')
